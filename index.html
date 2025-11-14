@@ -1,520 +1,515 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Fast Large Language Model Collaborative Decoding via Speculation">
+  <meta property="og:title" content="Fast Large Language Model Collaborative Decoding via Speculation"/>
+  <meta property="og:description" content="A novel framework that accelerates collaborative decoding without compromising performance."/>
+  <meta property="og:url" content="https://yourwebsite.com/cos"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/cos-banner.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
 
-  <!-- Twitter -->
+
+  <meta name="twitter:title" content="LMM-R1: Enhancing Multimodal Reasoning">
+  <meta name="twitter:description" content="Boosting 3B LMMs reasoning abilities through two-stage rule-based reinforcement learning">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/cos-banner.png">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
-
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="large langugae models, speculative decoding, model collaboration">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+  <title>Fast Large Language Model Collaborative Decoding via Speculation</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+
+  <!-- MathJax for rendering mathematical formulas -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
-  <script defer src="static/js/index.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
   
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
+  <style>
+    /* Tab content styles */
+    .tab-pane {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .tab-pane.is-active {
+      display: block;
+      opacity: 1;
+    }
+    
+    /* Make sure the notification boxes have consistent height */
+    .notification {
+      min-height: 200px;
+      overflow-y: auto;
+      max-height: 500px;
+      white-space: pre-wrap;
+      font-family: monospace;
+      line-height: 1.5;
+      font-size: 0.9em;
+    }
+    
+    /* Loading indicator */
+    .loading {
+      text-align: center;
+      padding: 20px;
+      font-style: italic;
+      color: #888;
+    }
+    
+    /* Math formula styles */
+    .mjx-chtml {
+      display: inline-block;
+      margin: 2px 0;
+    }
+    
+    /* Ensure inline math doesn't break line height */
+    .mjx-chtml.MJXc-display {
+      margin: 1em 0;
+      padding: 0.5em 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+    
+    /* Improve readability of math in dark notification boxes */
+    .notification .mjx-chtml {
+      color: #333;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    .paragraph-title {
+      font-weight: bold;
+      margin-right: 0.5em;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
 </head>
 <body>
 
 
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <main id="main-content">
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Fast Large Language Model Collaborative Decoding via Speculation</h1>
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
+              <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://jialefu.github.io/" target="_blank">Jiale Fu</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                  <a href="https://kamichanw.github.io/" target="_blank">Yuchu Jiang</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=AnEY5VoAAAAJ&hl=zh-CN" target="_blank">Junkai Chen</a>,</span>
+                <span class="author-block">
+                  <a href="https://fjm9933.github.io/" target="_blank">Jiaming Fan</a>,</span>
+                <span class="author-block">
+                  <a href="https://palm.seu.edu.cn/xgeng/" target="_blank">Xin Geng</a>,</span>
+                <span class="author-block">
+                  <a href="https://yangxuntu.github.io/" target="_blank">Xu Yang</a><sup>†</sup></span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Key Laboratory of New Generation Artificial Intelligence Technology and<br>Its Interdisciplinary Applications (Southeast University), Ministry of Education, China</span><br>
+              <span class="eql-cntrb"><small><sup>*</sup>Equal Contribution. <sup>†</sup>Corresponding Author</small></span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2502.01662" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Paper</span>
                 </a>
               </span>
-            </div>
-          </div>
+
+              <!-- Supplementary PDF link -->
+              <!-- <span class="link-block">
+                <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Supplementary</span>
+              </a>
+            </span> -->
+            <!-- Models -->
+            <span class="link-block">
+              <a href="https://kamichanw.github.io/publication/2025-02-01-cos" target="_blank"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon" style="vertical-align: middle; font-size: 20px;">📑</span>
+              <span>Blog</span>
+            </a>
+            </span>
+            <!-- Datasets -->
+            <!-- Github link -->
+            <span class="link-block">
+              <a href="https://github.com/Kamichanw/CoS" target="_blank"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>Code</span>
+            </a>
+          </span>
         </div>
       </div>
     </div>
   </div>
+</div>
+</div>
 </section>
 
 
 <!-- Teaser video-->
 <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
+<div class="container is-max-desktop">
+  <div class="hero-body">
+    <img src="static/images/teaser.gif" alt="CoS framework" width="100%">
+    <p>
+      CoS accelerates collaborative decoding through two key enhancement: (1) refining verification mechanism of speculative decoding(SD) to extend SD to collaborative decoding scenarios. (2) incorporate an alternate proposal framework to further boosting inference speed.
+    </p>
   </div>
+</div>
 </section>
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+<div class="container is-max-desktop">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+          Large Language Model (LLM) collaborative decoding techniques improve output quality by combining the outputs of multiple models at each generation step, but they incur high computational costs. In this paper, we introduce Collaborative decoding via Speculation (CoS), a novel framework that accelerates collaborative decoding without compromising performance. Inspired by Speculative Decoding--where a small proposal model generates tokens sequentially, and a larger target model verifies them in parallel, our approach builds on two key insights: (1) the verification distribution can be the combined distribution of both the proposal and target models, and (2) alternating each model as the proposer and verifier can further enhance efficiency. 
           </p>
-        </div>
+          <p>We generalize this method to collaboration among n models and theoretically prove that CoS is never slower than standard collaborative decoding, typically achieving faster speed. Extensive experiments demonstrate CoS is 1.11x-2.23x faster than standard collaborative decoding without compromising generation quality. 
+        </p>
       </div>
     </div>
   </div>
+</div>
 </section>
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+<!-- Paper Motivation -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+      <h2 class="title">Motivation</h2>
+      <p>
+        <!-- Paper Motivation -->
+      <div class="content has-text-justified">
+        <p>
+          We propose Collaborative Decoding via Speculation (CoS), a novel framework that accelerates collaborative decoding, e.g. contrastive decoding or weighted ensemble, by leveraging speculative decoding principles. Its core innovations are:
+        </p>
 
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+        <div class="columns">
+          <div class="column">
+            <div class="box">
+              <h4 class="subtitle is-5">Verification Mechanism Refinement</h4>
+              <p>
+                Speculative decoding allows not only sampling from the target model's distribution, but also sampling from any combined distribution of the proposal model and target model.
+              </p>
+            </div>
+          </div>
           
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="column">
+            <div class="box">
+              <h4 class="subtitle is-5">Alternate Proposal Framework</h4>
+              <p>
+                In standard speculative decoding, the proposer and verifier are fixed, one model always acts as the proposer and the other model acts as the verifier, which is suboptimal in the collaborative decoding setting.
+                </p><p> We observe that alternating each model as proposer and verifier can further speed up the collaboration process.
+              </p>
+            </div>
           </div>
         </div>
       </div>
+      </p>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
 
 
-<!-- Video carousel -->
+<!-- FRE Stage -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">CoS: Lossless Acceleration of Model Collaboration</h2>
+      <p>
+        The following video introduces the literature and most aspects of our approach. 
+        To understand more technical details, please visit our <a href="https://kamichanw.github.io/publication/2025-02-01-cos">blog</a> or read the <a href="https://arxiv.org/pdf/2502.01662">paper</a>.
+      </p>
+      <iframe width="90%" height="675" class="center" style="margin-top: 1em;" src="https://www.youtube.com/embed/faLySXcU2DE?si=kLbdu0HECWLshR0t" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
+      <h2 class="title">Experiment Setup</h2>
+      <p><span class="paragraph-title">Dataset and evaluation.</span>
+      We test CoS across multiple tasks including code generation, mathematical reasoning, multi-task understanding, and text summarization on HumanEval, GSM8K, MMLU, and CNNDM, respectively. We measure each method's speed by the average tokens generated per second and compute the speedup ratio relative to the standard collaborative decoding. All experiments are conducted on RTX 3090, except for evaluations involving the Llama-Vicuna model pair, which use the A6000 GPU.
+      </p>
+      <p><span class="paragraph-title">Combination functions and methods.</span>
+        We experiment with two combination functions: weighted ensemble (WE) at the distribution level and contrastive decoding (CD) at the logits level.
+        Among two combination functions, four methods are compared:  
+        (1) the standard collaborative decoding (<strong>WE</strong>, <strong>CD</strong>);  
+        (1) parallel collaborative decoding (<strong>WE-P</strong>, <strong>CD-P</strong>);  
+        (2) an accelerated version with speculative decoding (SD), using the smallest model as the proposal and the combined distribution as the target (<strong>WE-SD</strong>, <strong>CD-SD</strong>);  
+        and (3) CoS (<strong>WE-CoS</strong>, <strong>CD-CoS</strong>).
+      </p>
+      <p><span class="paragraph-title">Model pair configuration.</span>
+        We experiment on different types and pairs of LLMs, as shown below.
+      </p>
+      <img src="static/images/model-pair.png" alt="Model pair configuration" width="40%" class="center">
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+<!-- FRE 效果 -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Results</h2>
+      <p>From these tables, we observe the following findings:
+      <ol style="padding-left: 3em;">
+        <li>
+          <strong>CoS consistently achieves the highest speedup</strong> across all settings, while SD may sometimes slow down collaboration. This is because vanilla SD doesn't guarantee acceleration—especially when the acceptance rate is low.
+        </li>
+        <li>
+          <strong>CoS delivers a higher minimum speedup in the WE scenario</strong> compared to CD. In the two-model case, it reaches at least 1.34×, and in the three-model case, 1.27×. In contrast, CD can drop to 1.11×. This advantage comes from CoS maintaining a higher acceptance rate in WE.
+        </li>
+        <li>
+          <strong>Speedup varies by task and output determinism.</strong> For example, in the WE scenario, CoS achieves 1.65× on HumanEval, where strict formatting favors high acceptance. On summarization tasks, with more flexible outputs, the speedup drops to 1.36×.
+        </li>
+      </ol></p>
 
-
-
-
+      <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/we-results.png" alt="The speedup ratio of each method in WE setting." width="30%" class="center"/>
+              <h2 class="subtitle has-text-centered">
+                  <em><b>The speedup ratio of each method in WE setting.</b></em> The method with the optimal speedup is highlighted in <b>bold</b>.
+              </h2>
+          </div>
+          <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/we-raw.png" alt="The raw speed of each method under WE setting." width="55%" class="center"/>
+              <h2 class="subtitle has-text-centered">
+                  <em><b>The raw speed of each method under WE setting.</b></em> The table reports the average number of tokens generated per second. Models are of comparable sizes.
+              </h2>
+          </div>
+          <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/cd-results.png" alt="The speedup ratio of each method in CD setting." width="40%" class="center"/>
+              <h2 class="subtitle has-text-centered">
+                  <em><b>The speedup ratio of each method in CD setting.</b></em>
+              </h2>
+          </div>
+          <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/cd-raw.png" alt="The raw speed of each method under CD setting." width="40%" class="center"/>
+              <h2 class="subtitle has-text-centered">
+                  <em><b>The raw speed of each method under CD setting.</b></em> Models are of different sizes.
+              </h2>
+          </div>
+      </div>
+  </div>
+</section>
 
 
 <!-- Paper poster -->
 <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
+<div class="hero-body">
+  <div class="container">
+    <h2 class="title">Overview</h2>
 
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
+    <iframe src="static/pdfs/2502.01662v2.pdf" width="100%" height="550">
+    </iframe>
+    
+  </div>
+</div>
+</section>
 <!--End paper poster -->
 
 
+<!-- Add JavaScript for tab functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize tabs
+    const tabs = document.querySelectorAll('#example-tabs li');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    
+    console.log('Tabs initialized:', tabs.length, 'tabs found');
+    
+    // Debug: Print all tabs and their active state
+    tabs.forEach(tab => {
+      console.log('Tab:', tab.getAttribute('data-target'), 
+                 'Active:', tab.classList.contains('is-active'));
+    });
+    
+    // Debug: Print all panes and their active state
+    tabPanes.forEach(pane => {
+      console.log('Pane:', pane.id, 
+                 'Active:', pane.classList.contains('is-active'),
+                 'Display:', window.getComputedStyle(pane).display);
+    });
+    
+    // Add click event to each tab
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Get target tab pane ID
+        const targetId = this.getAttribute('data-target');
+        console.log('Tab clicked:', targetId);
+        
+        // Deactivate all tabs and tab panes
+        document.querySelectorAll('#example-tabs li.is-active').forEach(t => t.classList.remove('is-active'));
+        document.querySelectorAll('.tab-pane.is-active').forEach(p => p.classList.remove('is-active'));
+        
+        // Activate clicked tab and corresponding pane
+        this.classList.add('is-active');
+        const targetPane = document.getElementById(targetId);
+        if (targetPane) {
+          targetPane.classList.add('is-active');
+          console.log('Activated pane:', targetId);
+          
+          // Re-render MathJax in the newly activated tab
+          if (window.MathJax) {
+            MathJax.typesetPromise([targetPane]).catch(err => console.error('MathJax error:', err));
+          }
+        } else {
+          console.error('Target pane not found:', targetId);
+        }
+      });
+    });
+    
+    // Load content from files
+    loadExampleContent();
+    
+    // Ensure MathJax is properly initialized
+    if (window.MathJax && typeof window.MathJax.typeset === 'function') {
+      window.MathJax.startup = {
+        ready: () => {
+          console.log('MathJax is loaded and ready');
+          MathJax.startup.defaultReady();
+        }
+      };
+    }
+  });
+  
+  // Function to load example content from files
+  function loadExampleContent() {
+    console.log('Loading example content from files');
+    
+    // Get all content containers
+    const contentContainers = document.querySelectorAll('[data-file]');
+    
+    // Load content for each container
+    contentContainers.forEach(container => {
+      const filePath = container.getAttribute('data-file');
+      console.log('Loading content from:', filePath);
+      
+      fetch(filePath)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Failed to load file: ${filePath}`);
+          }
+          return response.text();
+        })
+        .then(text => {
+          // Process text to properly format mathematical formulas
+          // Replace LaTeX-style formulas with MathJax compatible format
+          // Inline math: $formula$ -> \(formula\)
+          // Display math: $$formula$$ -> \[formula\]
+          const processedText = text
+            .replace(/\$\$(.*?)\$\$/g, '\\[$1\\]')  // Display math
+            .replace(/\$(.*?)\$/g, '\\($1\\)');     // Inline math
+          
+          // Set the content with HTML to preserve formatting
+          container.innerHTML = processedText;
+          
+          // Typeset the math in this specific container
+          if (window.MathJax) {
+            MathJax.typesetPromise([container]).catch(err => console.error('MathJax error:', err));
+          }
+        })
+        .catch(error => {
+          console.error('Error loading file:', error);
+          container.innerHTML = `<p class="has-text-danger">Error loading content: ${error.message}</p>`;
+        });
+    });
+  }
+</script>
+  
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+<section class="section" id="BibTeX">
+<div class="container is-max-desktop content">
+  <h2 class="title">BibTeX</h2>
+  <pre><code>@inproceedings{fu2025speculative,
+  title={Fast Large Language Model Collaborative Decoding via Speculation},
+  author={Fu, Jiale and Jiang, Yuchu and Chen, Junkai and Fan, Jiaming and Geng, Xin and Yang, Xu},
+  booktitle={Forty-two International Conference on Machine Learning},
+  year={2025}
 }</code></pre>
-    </div>
+</div>
 </section>
 <!--End BibTex citation -->
 
 
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+<footer class="footer">
+<div class="container">
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content">
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+        <p>
+          This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+          Commons Attribution-ShareAlike 4.0 International License</a>.
+        </p>
 
-        </div>
       </div>
     </div>
   </div>
+</div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
